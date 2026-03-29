@@ -14,6 +14,10 @@
 
 </div>
 
+## 🎥 Project Demo
+
+Want to see the full flow of the project in action? **[Watch the Complete Demo Video on LinkedIn!](https://www.linkedin.com/posts/umang-vaghela-65357a2aa_finalyearproject-webdevelopment-php-activity-7444057201872392192-K_kT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEp6mh8BwIWa-C5n5PFSWOH62pjjy-gGuTE)**
+
 ## 📌 Overview
 
 The **Placement Portal** streamlines the recruitment process for academic institutions by bridging the gap between exceptional student talent and enterprise recruiters. Our 100% digital architecture is fast, reliable, and eliminates the hassle of traditional offline placements.
