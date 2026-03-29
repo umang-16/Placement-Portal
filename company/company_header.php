@@ -1,0 +1,67 @@
+<?php
+// કયું પેજ ખુલ્લું છે તે ચેક કરવા માટે
+$current_page = basename($_SERVER['PHP_SELF']);
+
+// જો કંપની લોગીન હોય તો નોટિફિકેશન કાઉન્ટ લાવો (system notifications from admin)
+if(isset($_SESSION['company_id']) && isset($conn)){
+    $company_id_nav = (int)$_SESSION['company_id'];
+    $unread_query = "SELECT COUNT(*) AS total FROM notifications WHERE company_id = $company_id_nav AND student_id = 0 AND is_read = 0";
+    $unread_res = mysqli_query($conn, $unread_query);
+    $unread_count = $unread_res ? mysqli_fetch_assoc($unread_res)['total'] : 0;
+} else {
+    $unread_count = 0;
+}
+?>
+<style>
+  /* 🔵 COMPANY NAVBAR CSS */
+  .navbar { background: rgba(10, 15, 26, 0.85) !important; backdrop-filter: blur(10px) !important; padding: 15px 35px !important; display: flex !important; justify-content: space-between !important; align-items: center !important; box-shadow: 0 4px 30px rgba(0,0,0,0.5) !important; position: sticky !important; top: 0 !important; z-index: 1000 !important; border-bottom: 1px solid rgba(255,255,255,0.05) !important;}
+  .nav-logo-container { display: flex !important; align-items: center !important; text-decoration: none !important; }
+  
+  /* 👇 અહી લોગો 2.2 ગણો મોટો કર્યો છે 👇 */
+  .nav-logo-img { height: 45px !important; width: auto !important; transform: scale(1.5); transform-origin: left center; transition: transform 0.3s ease !important; border-radius: 4px; }
+  .nav-logo-container:hover .nav-logo-img { transform: scale(1.6) !important; }
+
+  .nav-links { list-style: none !important; display: flex !important; gap: 12px !important; align-items: center !important; margin: 0 !important; padding: 0 !important; }
+  .nav-links li a { 
+      color: #cbd5e1 !important; 
+      text-decoration: none !important; 
+      font-size: 14px !important; 
+      font-weight: 600 !important; 
+      transition: all 0.3s ease !important; 
+      padding: 8px 16px !important; 
+      border-radius: 20px !important;
+      display: block !important;
+  }
+  .nav-links li a:hover { 
+      color: #f8fafc !important; 
+      background: rgba(255, 255, 255, 0.08) !important; 
+      transform: scale(1.05) !important; 
+  }
+  .nav-links li a.active { 
+      color: #38bdf8 !important; 
+      background: rgba(56, 189, 248, 0.15) !important; 
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2) !important;
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.3) !important;
+  }
+  
+  .nav-badge { background: #ef4444 !important; color: white !important; padding: 2px 7px !important; border-radius: 12px !important; font-size: 10px !important; margin-left: 6px !important; font-weight: bold !important; vertical-align: top !important; border: none !important;}
+</style>
+
+<nav class="navbar">
+  <a href="company-dashboard.php" class="nav-logo-container">
+    <img src="../assets/logo.png" onerror="this.src='../assets/logo.jpg'" alt="Placement Portal Logo" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a class="<?= $current_page == 'company-dashboard.php' ? 'active' : '' ?>" href="company-dashboard.php">Dashboard</a></li>
+    <li>
+        <a class="<?= $current_page == 'company-notifications.php' ? 'active' : '' ?>" href="company-notifications.php">
+            Notifications <?php if($unread_count > 0): ?> <span class="nav-badge"><?= $unread_count ?></span> <?php endif; ?>
+        </a>
+    </li>
+    <li><a class="<?= ($current_page == 'post-job.php' || $current_page == 'edit-job.php') ? 'active' : '' ?>" href="post-job.php">Post Job</a></li>
+    <li><a class="<?= $current_page == 'applicants.php' ? 'active' : '' ?>" href="applicants.php">Applicants</a></li>
+    <li><a class="<?= $current_page == 'company-interviews.php' ? 'active' : '' ?>" href="company-interviews.php">Interviews</a></li>
+    <li><a class="<?= ($current_page == 'company-profile.php' || $current_page == 'company-edit-profile.php') ? 'active' : '' ?>" href="company-profile.php">Profile</a></li>
+    <li><a href="company-logout.php" style="color: #ef4444 !important; border:none !important;"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+  </ul>
+</nav>
