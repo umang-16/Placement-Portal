@@ -4,7 +4,7 @@ require_once __DIR__ . "/../db.php";
 
 if(!isset($_SESSION['student_id'])){
     if(isset($_GET['ajax'])) { echo "Session Expired. Please login again."; exit; }
-    header("Location: student-login.php");
+    header("Location: ../login-selection.php");
     exit();
 }
 

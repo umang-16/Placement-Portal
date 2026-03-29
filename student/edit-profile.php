@@ -4,7 +4,7 @@ require_once __DIR__ . "/../db.php";
 
 /* 🔐 LOGIN CHECK */
 if(!isset($_SESSION['student_id'])){ 
-    header("Location: student-login.php"); 
+    header("Location: ../login-selection.php"); 
     exit(); 
 }
 $student_id = (int)$_SESSION['student_id'];

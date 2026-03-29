@@ -4,7 +4,7 @@ require_once __DIR__ . "/../db.php";
 
 // 🔐 COMPANY LOGIN CHECK
 if(!isset($_SESSION['company_id'])){ 
-    header("Location: company-login.php"); 
+    header("Location: ../login-selection.php"); 
     exit(); 
 }
 

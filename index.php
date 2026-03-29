@@ -310,15 +310,12 @@ window.addEventListener("load", function() {
 });
 
 // Login Check Logic
-let pendingTargetPage = 'login-selection.php';
-
 function checkLogin(targetPage) {
-    pendingTargetPage = targetPage;
     document.getElementById("loginConfirmModal").style.display = "flex";
 }
 
 function proceedToLogin() {
-    window.location.href = pendingTargetPage;
+    window.location.href = 'login-selection.php';
 }
 
 function closeConfirmModal() {

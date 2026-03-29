@@ -3,7 +3,7 @@ session_start();
 require_once __DIR__ . "/../db.php";
 
 if (!isset($_SESSION['company_id'])) {
-    header("Location: company-login.php");
+    header("Location: ../login-selection.php");
     exit();
 }
 
