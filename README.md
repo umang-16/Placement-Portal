@@ -1,52 +1,92 @@
-# Placement Portal
+<div align="center">
 
-A centralized, web-based platform designed to bridge the gap between talented students and top recruiting companies. This portal streamlines the entire recruitment process, providing dedicated interfaces for Students, Companies, and Administrators.
+# 🎓 Placement Portal
 
-## 🚀 Features
+**A robust, centralized web platform engineered to connect top-tier student talent with leading companies.**
 
-### For Students
-*   **Profile Management & Resume Builder:** Build a digital profile and upload resumes.
-*   **Job Discovery:** Explore active job postings and company details.
-*   **Application Tracking:** Apply for jobs and track the real-time status of applications.
-*   **Notifications & Alerts:** Receive timely updates regarding shortlists and interview schedules.
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)]()
+[![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)]()
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]()
 
-### For Companies
-*   **Job Postings:** Seamlessly post and manage job opportunities and eligibility criteria.
-*   **Candidate Shortlisting:** Efficiently review applicant profiles and resumes.
-*   **Interview Scheduling:** Organize and send interview schedules directly to students.
-*   **Offer Management:** Upload and distribute offer letters to selected candidates.
+---
 
-### For Administrators
-*   **User Management:** Approve and verify company/student registrations.
-*   **System Moderation:** Monitor job listings and application statistics.
-*   **Helpdesk & Notices:** Broadcast important notices and resolve platform issues.
+</div>
 
-## 💻 Tech Stack
-*   **Frontend:** HTML5, CSS3 (Modern Glassmorphism & Dark Themes), JavaScript
-*   **Backend:** PHP
-*   **Database:** MySQL
-*   **Mailing System:** PHPMailer
+## 📌 Overview
 
-## ⚙️ Installation & Local Setup
+The **Placement Portal** streamlines the recruitment process for academic institutions by bridging the gap between exceptional student talent and enterprise recruiters. Our 100% digital architecture is fast, reliable, and eliminates the hassle of traditional offline placements.
 
-1. **Clone the repository**
+## ✨ Key Features
+
+### 👨‍🎓 For Students
+*   **Digital Resumes:** Build extensive academic profiles and securely upload your latest resumes.
+*   **One-Click Application:** Explore verified job posts and apply instantly.
+*   **Live Tracking:** Monitor your application statuses (Shortlisted, Interview, Selected, Rejected) in real-time.
+*   **Instant Alerts:** Never miss out! Get instant notifications regarding schedules and updates.
+
+### 🏢 For Companies
+*   **Seamless Job Postings:** Create custom job profiles with specific eligibility criteria.
+*   **Rapid Shortlisting:** Efficiently review candidate skills, sort applicants, and take immediate action.
+*   **Interview Scheduling:** Push direct notifications to short-listed candidates for technical and HR rounds.
+*   **Offer Management:** Upload and distribute finalized offer letters cleanly and securely.
+
+### 🛡️ For Administrators
+*   **Complete Oversight:** Gain a bird's-eye view over placements through comprehensive live analytics & statistics.
+*   **Data Moderation:** Approve new accounts, manage job listings, and solve system discrepancies.
+*   **Global Notice Board:** Broadcast emergency notices to all users simultaneously.
+
+---
+
+## 🛠️ Technology Stack
+
+| Architecture Layer | Technology Used |
+| :--- | :--- |
+| **Frontend UI** | HTML5, CSS3, Vanilla JavaScript |
+| **Design Language** | Modern Glassmorphism & Sleek Dark Theming |
+| **Backend Core** | Raw PHP |
+| **Database Systems** | MySQL |
+| **SMTP Delivery** | PHPMailer |
+
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to set up the project on your local machine.
+
+### 1️⃣ Prerequisites
+*   [XAMPP](https://www.apachefriends.org/index.html) or [WampServer](https://www.wampserver.com/) installed.
+*   Git CLI installed.
+
+### 2️⃣ Installation Steps
+
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/umang-16/Placement-Portal.git
    ```
-2. **Setup XAMPP / WAMP**
-   * Move the project folder to `htdocs` (if using XAMPP) or `www` (if using WAMP).
-   
-3. **Database Configuration**
-   * Open PHPMyAdmin and create a new database (e.g., `placement_portal`).
-   * Import the SQL schema and tables.
-   * Update the database credentials in the `db.php` file to match your local environment.
+2. **Move into your Server Directory**
+   * Move the entire cloned folder to `htdocs` (if XAMPP) or `www` (if WAMP).
+3. **Database Setup**
+   * Start the **Apache** & **MySQL** modules using the XAMPP/WAMP Control Panel.
+   * Open `localhost/phpmyadmin` in your web browser.
+   * Create a new database (e.g., `placement_portal`).
+   * Import your SQL structure format file into the database.
+   * Update your database credentials (username/password) inside the `db.php` configuration file.
+4. **Launch**
+   * Head over to `http://localhost/Placement-Portal` and enjoy your platform!
 
-4. **Run the Application**
-   * Start the Apache and MySQL modules.
-   * Open your browser and navigate to `http://localhost/Placement-Portal`.
+---
 
-## 🤝 Contribution
-Contributions are welcome. Please open an issue or submit a pull request with your suggested improvements.
+## 🤝 Contribution Guidelines
+We welcome open-source contributions!
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
-## 📄 License
-This project is open-source and available under the MIT License.
+<div align="center">
+<br/>
+<i>Built with ❤️ for the future of digital recruitment.</i>
+</div>
